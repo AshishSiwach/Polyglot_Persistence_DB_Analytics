@@ -1,0 +1,36 @@
+# Create .gitignore in Python_Implementation folder
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files (optional - exclude if files are large)
+03_Data/**/*.csv
+03_Data/**/*.json
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
