@@ -70,14 +70,14 @@ from pathlib import Path
 
 # Get project root directory
 PROJECT_ROOT = Path(__file__).parent.parent
-DATA_DIR = PROJECT_ROOT / '03_Data'
+DATA_DIR = PROJECT_ROOT / 'Data'
 
-SQL_DATA_DIR = DATA_DIR / 'SQL_Server'
-MONGO_DATA_DIR = DATA_DIR / 'MongoDB'
+SQL_DATA_DIR = DATA_DIR / 'SQL_DATA_DIR'
+MONGO_DATA_DIR = DATA_DIR / 'MONGO_DATA_DIR'
 
 # CSV file paths for SQL Server
 CSV_FILES = {
-    'customers': SQL_DATA_DIR / 'customers.csv',
+    'customers': SQL / 'customers.csv',
     'products': SQL_DATA_DIR / 'products.csv',
     'stores': SQL_DATA_DIR / 'stores.csv',
     'suppliers': SQL_DATA_DIR / 'suppliers.csv',
