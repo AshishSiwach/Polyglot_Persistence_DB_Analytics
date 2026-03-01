@@ -7,9 +7,39 @@ import pyodbc
 import sys
 from pathlib import Path
 
+# Fix Unicode output on Windows terminals with cp1252 encoding
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
 # Add setup directory to path
 sys.path.append(str(Path(__file__).parent.parent / '01_Setup'))
-from config import SQL_CONNECTION_STRING, SQL_TRUSTED_CONNECTION_STRING
+from config import SQL_CONNECTION_STRING, SQL_TRUSTED_CONNECTION_STRING, SQL_SERVER_CONFIG
+
+def ensure_database_exists():
+    """
+    Connect to master and create the WalmartUK database if it doesn't exist.
+    Must be called before get_sql_connection() on a fresh SQL Server instance.
+    """
+    master_str = (
+        f"DRIVER={SQL_SERVER_CONFIG['driver']};"
+        f"SERVER={SQL_SERVER_CONFIG['server']};"
+        f"DATABASE=master;"
+        f"Trusted_Connection=yes;"
+    )
+    try:
+        conn = pyodbc.connect(master_str, autocommit=True)
+        cursor = conn.cursor()
+        cursor.execute(
+            "IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = ?) "
+            "BEGIN CREATE DATABASE [WalmartUK] END",
+            SQL_SERVER_CONFIG['database']
+        )
+        print(f"✓ Database '{SQL_SERVER_CONFIG['database']}' is ready")
+        conn.close()
+    except pyodbc.Error as e:
+        print(f"❌ Could not ensure database exists: {e}")
+        raise
+
 
 def get_sql_connection(use_trusted=False):
     """

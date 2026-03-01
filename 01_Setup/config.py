@@ -16,7 +16,7 @@ load_dotenv()
 # SQL SERVER CONFIGURATION
 # ============================================================================
 SQL_SERVER_CONFIG = {
-    'server': os.getenv('SQL_SERVER', 'localhost'),  # Or your server name
+    'server': os.getenv('SQL_SERVER', r'localhost\SQLEXPRESS'),  # Or your server name
     'database': os.getenv('SQL_DATABASE', 'WalmartUK'),
     'username': os.getenv('SQL_USER', 'sa'),  # Windows Auth: use your Windows username
     'password': os.getenv('SQL_PASSWORD', 'YourPassword123'),  # Set your password

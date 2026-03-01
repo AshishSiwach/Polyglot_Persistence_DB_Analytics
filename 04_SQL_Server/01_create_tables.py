@@ -12,12 +12,15 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent))
 
-from sql_utils import get_sql_connection, execute_sql, table_exists
+from sql_utils import get_sql_connection, execute_sql, table_exists, ensure_database_exists
 
 def create_customer_table(conn):
     """Create Customer table"""
+    if table_exists(conn, 'Customer'):
+        print("\n1. Customer table already exists, skipping...")
+        return
     print("\n1. Creating Customer table...")
-    
+
     sql = """
     CREATE TABLE Customer (
         CustomerID INT PRIMARY KEY IDENTITY(1,1),
@@ -42,8 +45,11 @@ def create_customer_table(conn):
 
 def create_product_table(conn):
     """Create Product table - COMMON IDENTIFIER with MongoDB"""
+    if table_exists(conn, 'Product'):
+        print("\n2. Product table already exists, skipping...")
+        return
     print("\n2. Creating Product table (Common Identifier)...")
-    
+
     sql = """
     CREATE TABLE Product (
         ProductID INT PRIMARY KEY IDENTITY(1,1),
@@ -70,8 +76,11 @@ def create_product_table(conn):
 
 def create_store_table(conn):
     """Create Store table"""
+    if table_exists(conn, 'Store'):
+        print("\n3. Store table already exists, skipping...")
+        return
     print("\n3. Creating Store table...")
-    
+
     sql = """
     CREATE TABLE Store (
         StoreID INT PRIMARY KEY IDENTITY(1,1),
@@ -97,8 +106,11 @@ def create_store_table(conn):
 
 def create_supplier_table(conn):
     """Create Supplier table"""
+    if table_exists(conn, 'Supplier'):
+        print("\n4. Supplier table already exists, skipping...")
+        return
     print("\n4. Creating Supplier table...")
-    
+
     sql = """
     CREATE TABLE Supplier (
         SupplierID INT PRIMARY KEY IDENTITY(1,1),
@@ -117,8 +129,11 @@ def create_supplier_table(conn):
 
 def create_order_table(conn):
     """Create Order table - TIME AS ATTRIBUTE (not separate entity)"""
+    if table_exists(conn, 'Order'):
+        print("\n5. Order table already exists, skipping...")
+        return
     print("\n5. Creating Order table (Time as Attribute)...")
-    
+
     sql = """
     CREATE TABLE [Order] (
         OrderID INT PRIMARY KEY IDENTITY(1,1),
@@ -153,8 +168,11 @@ def create_order_table(conn):
 
 def create_orderline_table(conn):
     """Create OrderLine table - Transaction detail"""
+    if table_exists(conn, 'OrderLine'):
+        print("\n6. OrderLine table already exists, skipping...")
+        return
     print("\n6. Creating OrderLine table (Transaction Detail)...")
-    
+
     sql = """
     CREATE TABLE OrderLine (
         OrderLineID INT PRIMARY KEY IDENTITY(1,1),
@@ -184,8 +202,11 @@ def create_orderline_table(conn):
 
 def create_inventory_table(conn):
     """Create Inventory table - JUNCTION TABLE for M:M relationships"""
+    if table_exists(conn, 'Inventory'):
+        print("\n7. Inventory table already exists, skipping...")
+        return
     print("\n7. Creating Inventory table (Junction Table)...")
-    
+
     sql = """
     CREATE TABLE Inventory (
         InventoryID INT PRIMARY KEY IDENTITY(1,1),
@@ -240,8 +261,9 @@ def main():
     print("=" * 70)
     
     try:
-        # Connect to SQL Server
-        conn = get_sql_connection()
+        # Create database if it doesn't exist, then connect
+        ensure_database_exists()
+        conn = get_sql_connection(use_trusted=True)
         
         # Create tables in dependency order
         create_customer_table(conn)
