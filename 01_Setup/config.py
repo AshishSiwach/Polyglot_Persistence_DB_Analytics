@@ -77,7 +77,7 @@ MONGO_DATA_DIR = DATA_DIR / 'MONGO_DATA_DIR'
 
 # CSV file paths for SQL Server
 CSV_FILES = {
-    'customers': SQL / 'customers.csv',
+    'customers': SQL_DATA_DIR / 'customers.csv',
     'products': SQL_DATA_DIR / 'products.csv',
     'stores': SQL_DATA_DIR / 'stores.csv',
     'suppliers': SQL_DATA_DIR / 'suppliers.csv',
