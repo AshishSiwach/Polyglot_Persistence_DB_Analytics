@@ -1,0 +1,21 @@
+StoreID,StoreName,Location,Region,ManagerName,Phone,OpeningDate,IsActive
+1,Walmart Supercentre Oxford,Ashley Fields Shopping Park,South East,Dr Frederick Hodgson,+44808 1570256,2024-01-03,1
+2,Walmart Supercentre Southampton,Collins Passage Shopping Park,South East,Mr Philip Martin,01914960870,2021-10-09,1
+3,Walmart Supercentre Middlesbrough,Townsend Pike Shopping Park,North East,Lorraine Harrison,+441632 960349,2022-06-16,1
+4,Walmart Supercentre Newcastle,Rogers Summit Shopping Park,North East,Clifford Wilkinson,+44909 879 0460,2021-09-06,1
+5,Walmart Supercentre Leicester,Holmes Road Shopping Park,East Midlands,Ruth Russell-Cooper,+44(0)909 8790830,2023-09-23,1
+6,Walmart Supercentre Northampton,Reece Locks Shopping Park,East Midlands,Mr Peter Bryant,(0114) 496 0926,2017-08-01,1
+7,Walmart Supercentre Newry,Matthews Avenue Shopping Park,Northern Ireland,Anna Stanley,+44(0)121 496 0786,2020-11-20,1
+8,Walmart Supercentre Derry,Morley Pike Shopping Park,Northern Ireland,Miss Maureen Mitchell,+44131 4960751,2019-02-02,1
+9,Walmart Supercentre Wolverhampton,Jones Harbor Shopping Park,West Midlands,Sarah Barnett,01914960758,2023-03-22,1
+10,Walmart Supercentre Coventry,Iain Springs Shopping Park,West Midlands,Eleanor Hammond,0141 4960545,2017-12-21,1
+11,Walmart Supercentre Edinburgh,Clive Glens Shopping Park,Scotland,Dr Callum Rees,+44(0)1614960997,2021-03-13,1
+12,Walmart Supercentre Dundee,Gareth Unions Shopping Park,Scotland,Mr Oliver Hill,(0191) 4960608,2020-02-18,1
+13,Walmart Supercentre Bolton,Perry Ways Shopping Park,North West,Charlotte Price,01184960630,2021-03-27,1
+14,Walmart Supercentre Warrington,Dyer Forest Shopping Park,North West,Danny Ali,+441164960050,2019-12-17,1
+15,Walmart Supercentre Ipswich,Tina Trail Shopping Park,East of England,Dr Joshua Kelly,(029) 2018 0909,2023-07-14,1
+16,Walmart Supercentre Norwich,Lynda Mountains Shopping Park,East of England,Norman Taylor,+44808 157 0972,2020-10-19,1
+17,Walmart Supercentre Hull,Scott Point Shopping Park,Yorkshire,Victoria Kelly-McCarthy,+44(0)118 496 0804,2021-07-26,1
+18,Walmart Supercentre Bradford,Gillian Ford Shopping Park,Yorkshire,Dr Beth Hughes,+44(0)161 4960095,2024-08-21,1
+19,Walmart Supercentre London Central,Marion Glen Shopping Park,Greater London,John Gregory,(020)74960802,2023-07-07,1
+20,Walmart Supercentre Stratford,Leslie Stravenue Shopping Park,Greater London,Malcolm Dixon,+44(0)28 9018031,2022-03-07,1

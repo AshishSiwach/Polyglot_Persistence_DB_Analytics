@@ -1,0 +1,24 @@
+SupplierID,CompanyName,ContactName,ContactEmail,Phone,Address,City,Country,IsActive
+1,Unilever UK,Clifford Simpson,brettreynolds@unileveruk.co.uk,028 9018 0073,"Flat 03
+Lynne Summit",Plymouth,United Kingdom,1
+2,ABP Food Group,Brett Nicholls,stacey67@abpfoodgroup.co.uk,+441314960951,"Flat 8
+Rahman Spur",Nottingham,United Kingdom,1
+3,Warburtons Ltd,Jason Lawson,lyndanewton@warburtons.co.uk,+44289018868,"Flat 9
+Walsh Rue",Warrington,United Kingdom,1
+4,Apple UK,Mr Graham Coates,pholland@appleuk.co.uk,+441314960869,"Flat 76
+Harris Path",Cambridge,United Kingdom,1
+5,Kraft Heinz UK,Carol Baker,alucas@kraftheinzuk.co.uk,01414960629,151 Jade Plains,Reading,United Kingdom,1
+6,Samsung Electronics UK,Keith Harris,margaretwest@samsungelectronicsuk.co.uk,+44808 157 0594,"Studio 89
+Emily Drives",Wembley,United Kingdom,1
+7,Dyson Ltd,Mary Nicholls,geraldlambert@dyson.co.uk,+44115 496 0798,2 Megan Springs,Lisburn,United Kingdom,1
+8,Mars Wrigley UK,Mr Jack Walters,rsaunders@marswrigleyuk.co.uk,+44909 8790870,"Studio 7
+Campbell Cliffs",Plymouth,United Kingdom,1
+9,PepsiCo UK,Ross Burton,terry39@pepsicouk.co.uk,01914960188,37 Jay Prairie,Stoke,United Kingdom,1
+10,Booker Wholesale,Georgia Hughes,bevanjosh@bookerwholesale.co.uk,+44(0)131 4960896,83 Walton Mills,Swansea,United Kingdom,1
+11,Mondelez UK,Ms Marian Brown,andrewrichardson@mondelezuk.co.uk,+44141 496 0123,"Studio 12h
+Julia Vista",Glasgow,United Kingdom,1
+12,Brakes Group,Mrs Harriet Shaw,nashkirsty@brakesgroup.co.uk,+44(0)28 9018 0886,207 Joanne Loaf,Swansea,United Kingdom,1
+13,Sony UK,Joel Sims-Iqbal,ogrant@sonyuk.co.uk,(0161) 496 0298,89 Francis Harbor,Middlesbrough,United Kingdom,1
+14,Nestle UK,Conor Adams-Baker,tina70@nestleuk.co.uk,01184960506,"Flat 78N
+Taylor Tunnel",Durham,United Kingdom,1
+15,Tesco Grocery Wholesale,Nathan Turner-Bates,hollie70@tescogrocerywholesale.co.uk,0808 157 0773,3 Brandon Isle,Sunderland,United Kingdom,1
