@@ -311,7 +311,7 @@ def main():
     try:
         # Connect to both databases
         print("\nConnecting to databases...")
-        sql_conn = get_sql_connection()
+        sql_conn = get_sql_connection(use_trusted = True)
         mongo_db = get_mongo_connection()
         
         # Run demonstrations
