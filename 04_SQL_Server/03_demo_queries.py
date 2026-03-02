@@ -20,14 +20,10 @@ def demo_time_based_analysis(conn):
     DEMO 1: Time-Based Analysis (OrderDate as Attribute)
     
     Shows: Time is an ATTRIBUTE, not a separate entity
-    Feedback addressed: "Time is not an entity in its own right"
     """
     print("\n" + "=" * 70)
     print("DEMO 1: TIME-BASED ANALYSIS")
     print("=" * 70)
-    print("\nWhat to say in video:")
-    print('"Based on feedback, I removed the Time entity. OrderDate is now an')
-    print('attribute in the Order table. Let me demonstrate time-based queries')
     print('using SQL\'s native date functions..."')
     print("\n" + "-" * 70)
     
@@ -57,14 +53,8 @@ def demo_time_based_analysis(conn):
     print("\n" + "=" * 70)
     print("KEY INSIGHT:")
     print("=" * 70)
-    print("✓ No Time table needed - SQL's date functions work on OrderDate")
     print("✓ YEAR(), MONTH(), DATENAME() provide all temporal analysis")
     print("✓ Simpler structure, better performance")
-    print("\nWhat to say in video:")
-    print('"As you can see, using OrderDate as an attribute gives us powerful')
-    print('time-based analytics without the overhead of a separate Time entity.') 
-    print('This addresses the feedback that Time should not be a separate entity."')
-
 def demo_market_basket_analysis(conn):
     """
     DEMO 2: Market Basket Analysis (Order/OrderLine Structure)
@@ -75,9 +65,6 @@ def demo_market_basket_analysis(conn):
     print("\n\n" + "=" * 70)
     print("DEMO 2: MARKET BASKET ANALYSIS")
     print("=" * 70)
-    print("\nWhat to say in video:")
-    print('"Next, I\'ll demonstrate why replacing Sales with Order and OrderLine')
-    print('is superior. This structure enables market basket analysis - finding')
     print('products frequently bought together..."')
     print("\n" + "-" * 70)
     
@@ -110,27 +97,16 @@ def demo_market_basket_analysis(conn):
     print("=" * 70)
     print("✓ This query identifies products in the SAME shopping basket")
     print("✓ Only possible with Order/OrderLine structure")
-    print("✓ Single Sales entity couldn't represent multi-product orders")
-    print("\nWhat to say in video:")
-    print('"These results show which products customers buy together. This is')
-    print('ONLY possible with the Order/OrderLine structure. With a single Sales')
-    print('entity, we couldn\'t identify products in the same basket. This proves')
-    print('why Sales should not be modeled as a single entity."')
 
 def demo_inventory_junction_table(conn):
     """
     DEMO 3: Inventory as Junction Table
     
     Shows: Inventory with explicit foreign keys (not "via inventory")
-    Feedback addressed: "Relationships should not be labelled 'via inventory'"
     """
     print("\n\n" + "=" * 70)
     print("DEMO 3: INVENTORY AS JUNCTION TABLE")
     print("=" * 70)
-    print("\nWhat to say in video:")
-    print('"The feedback noted relationships shouldn\'t be labeled \'via inventory.\'')
-    print('Let me show how Inventory properly functions as a junction table with')
-    print('explicit foreign key relationships..."')
     print("\n" + "-" * 70)
     
     sql = """
@@ -197,9 +173,6 @@ def demo_customer_lifetime_value(conn):
     print("\n\n" + "=" * 70)
     print("DEMO 4: CUSTOMER LIFETIME VALUE BY REGION")
     print("=" * 70)
-    print("\nWhat to say in video:")
-    print('"Now I\'ll demonstrate a complex join showing the power of relational')
-    print('data - calculating customer lifetime value by region..."')
     print("\n" + "-" * 70)
     
     sql = """
@@ -299,7 +272,7 @@ def main():
     print("=" * 70)
     
     try:
-        conn = get_sql_connection()
+        conn = get_sql_connection(use_trusted = True)
         
         # Run all demonstrations
         demo_time_based_analysis(conn)

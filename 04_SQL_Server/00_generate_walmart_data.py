@@ -331,7 +331,7 @@ def generate_orders_and_orderlines(customers, products, stores, n_orders=NUM_ORD
     for order_id in range(1, n_orders + 1):
         customer = random.choice(customers)
         store = random.choice(stores)
-        order_date = fake.date_time_between(start_date='-3m', end_date='now')
+        order_date = fake.date_time_between(start_date='-2y', end_date='now')
         
         # Select shopping pattern
         pattern = random.choice(basket_patterns)
