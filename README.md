@@ -17,6 +17,9 @@ These act as **shared keys across SQL Server and MongoDB**, enabling:
 
 ---
 
+<img width="1893" height="2971" alt="image" src="https://github.com/user-attachments/assets/a3e7e258-e0f6-4b53-9071-262942487120" />
+
+
 ## 🎯 Business Problem
 
 ### ❗ Challenge
